@@ -14,11 +14,20 @@
   </head>
 
   <body>
+
+  <% if notice %>
+  	<p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+  	<p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+  
   <header class="container mt-4 mb-4">
     <a href="https://render.com">
       <%= image_tag 'render-banner.png', class: 'mw-100' %>
     </a>
   </header>
+
   
     <%= yield %>
   </body>
